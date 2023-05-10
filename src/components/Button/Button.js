@@ -1,13 +1,33 @@
 import React from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Button = () => {
-  function apretasteUnBoton () {
-    alert('Felicidades, apretas un boton')
+  const apretasteUnBoton = () => {
+    toast.success("Felicidades, apretaste un boton!", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      });
   }
 
-  function apretasteOtroBoton () {
-    alert('Felicitaciónes, apretas otro boton')
+  const apretasteOtroBoton = () => {
+    toast.success("Felicitaciónes, apretaste otro boton!", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      });
   }
 
   return (
@@ -18,6 +38,7 @@ const Button = () => {
       <button className='btn btn-outline-primary' onClick={apretasteOtroBoton}>
         Soy otro Boton
       </button>
+      <ToastContainer/>
     </div>
   )
 }
